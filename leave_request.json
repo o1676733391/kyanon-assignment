@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "sender": "alice@company.com",
+    "type": "leave_request"
+  },
+  {
+    "id": 3,
+    "sender": "charlie@client.com",
+    "type": "leave_request"
+  },
+  {
+    "id": 4,
+    "sender": "david@company.com",
+    "type": "leave_request"
+  },
+  {
+    "id": 5,
+    "sender": "emma@company.com",
+    "type": "leave_request"
+  },
+  {
+    "id": 6,
+    "sender": "frank@company.com",
+    "type": "leave_request"
+  },
+  {
+    "id": 7,
+    "sender": "grace@company.com",
+    "type": "leave_request"
+  },
+  {
+    "id": 8,
+    "sender": "henry@company.com",
+    "type": "leave_request"
+  },
+  {
+    "id": 9,
+    "sender": "ivy@company.com",
+    "type": "leave_request"
+  },
+  {
+    "id": 10,
+    "sender": "jack@company.com",
+    "type": "leave_request"
+  },
+  {
+    "id": 11,
+    "sender": "kate@company.com",
+    "type": "leave_request"
+  },
+  {
+    "id": 12,
+    "sender": "lucas@company.com",
+    "type": "leave_request"
+  },
+  {
+    "id": 13,
+    "sender": "mary@company.com",
+    "type": "leave_request"
+  },
+  {
+    "id": 14,
+    "sender": "steve@company.com",
+    "type": "leave_request"
+  },
+  {
+    "id": 15,
+    "sender": "anna@company.com",
+    "type": "leave_request"
+  }
+]
