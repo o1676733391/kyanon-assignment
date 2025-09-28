@@ -2,8 +2,6 @@
 
 ## Mô tả
 Script `filter_leave_requests.py` lọc các email liên quan đến nghỉ phép (leave request) từ file `emails.csv` dựa trên từ khoá "leave" xuất hiện trong subject hoặc body.
-
-## Logic cơ bản
 - Nếu subject hoặc body chứa từ "leave" (không phân biệt hoa thường), email sẽ được coi là leave request.
 - Kết quả xuất ra file `leave_request.json`.
 
