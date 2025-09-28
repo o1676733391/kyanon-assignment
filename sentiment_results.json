@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "sender": "alice@company.com",
+    "sentiment": "leave"
+  },
+  {
+    "id": 2,
+    "sender": "bob@company.com",
+    "sentiment": "not"
+  },
+  {
+    "id": 3,
+    "sender": "charlie@client.com",
+    "sentiment": "leave"
+  },
+  {
+    "id": 4,
+    "sender": "david@company.com",
+    "sentiment": "leave"
+  },
+  {
+    "id": 5,
+    "sender": "emma@company.com",
+    "sentiment": "leave"
+  },
+  {
+    "id": 6,
+    "sender": "frank@company.com",
+    "sentiment": "not"
+  },
+  {
+    "id": 7,
+    "sender": "grace@company.com",
+    "sentiment": "leave"
+  },
+  {
+    "id": 8,
+    "sender": "henry@company.com",
+    "sentiment": "not"
+  },
+  {
+    "id": 9,
+    "sender": "ivy@company.com",
+    "sentiment": "not"
+  },
+  {
+    "id": 10,
+    "sender": "jack@company.com",
+    "sentiment": "leave"
+  },
+  {
+    "id": 11,
+    "sender": "kate@company.com",
+    "sentiment": "not"
+  },
+  {
+    "id": 12,
+    "sender": "lucas@company.com",
+    "sentiment": "leave"
+  },
+  {
+    "id": 13,
+    "sender": "mary@company.com",
+    "sentiment": "not"
+  },
+  {
+    "id": 14,
+    "sender": "steve@company.com",
+    "sentiment": "not"
+  },
+  {
+    "id": 15,
+    "sender": "anna@company.com",
+    "sentiment": "not"
+  }
+]

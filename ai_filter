@@ -1,0 +1,56 @@
+import csv
+import json
+import os
+from google import genai
+from google.genai import types
+
+def analyze_sentiment(text, client, model="gemini-2.0-flash-lite"):
+    contents = [
+        types.Content(
+            role="user",
+            parts=[
+                types.Part(text=f"Hãy phân tích email sau và xác định xem người gửi có đang yêu cầu xin nghỉ phép (leave request) hay không:\n\n{text}\n\nTrả về một trong hai giá trị:\n- 'leave_request' nếu đây là yêu cầu xin nghỉ phép thực sự\n- 'not_leave_request' nếu chỉ nhắc đến leave nhưng không phải yêu cầu nghỉ phép\n\nChỉ trả về một từ khóa duy nhất.")
+            ],
+        ),
+    ]
+    generate_content_config = types.GenerateContentConfig(
+        thinking_config=types.ThinkingConfig(thinking_budget=0),
+    )
+    try:
+        for chunk in client.models.generate_content_stream(
+            model=model,
+            contents=contents,
+            config=generate_content_config,
+        ):
+            return chunk.text.strip().lower()
+    except Exception as e:
+        print(f"Lỗi khi gọi Gemini API: {e}")
+        return "error"
+    return "unknown"
+
+def main():
+    client = genai.Client(
+        api_key=os.environ.get("GEMINI_API_KEY"),
+    )
+    input_file = 'emails.csv'
+    output_file = 'sentiment_results.json'
+    results = []
+
+    with open(input_file, mode='r', encoding='utf-8') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            email_text = f"Subject: {row['subject']}\nBody: {row['body']}"
+            sentiment = analyze_sentiment(email_text, client)
+            results.append({
+                'id': int(row['id']),
+                'sender': row['sender'],
+                'sentiment': sentiment
+            })
+
+    with open(output_file, mode='w', encoding='utf-8') as jsonfile:
+        json.dump(results, jsonfile, ensure_ascii=False, indent=2)
+
+    print(f"Đã xuất kết quả sentiment ra {output_file}")
+
+if __name__ == "__main__":
+    main()
